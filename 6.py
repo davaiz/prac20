@@ -23,11 +23,19 @@ def dejkstra(G, start):
         for neighbour in G[current]:
             offering_shortest_path = shortest_path[current] + G[current][neighbour]
             if offering_shortest_path < shortest_path[neighbour]:
+                P.add_edge(current, neighbour)
                 shortest_path[neighbour] = offering_shortest_path
                 queue.append(neighbour)
     return shortest_path
 G = graf()
 P = nx.Graph()
+zero = input('Введите начальную точку ')
+finish = input('Введите конечную точку ')
+shortest_path = dejkstra(G, zero)
+print('Кратчайшие пути из ')
+nx.draw(P)
+plt.savefig("simple_path.png") # save as png
+plt.show() # display
 zero = input('Введите начальную точку ')
 finish = input('Введите конечную точку ')
 shortest_path = dejkstra(G, zero)
