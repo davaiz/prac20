@@ -1,8 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 G = nx.Graph()
-N = int(input())
-M = int(input())
+M = int(input('Количество рёбер в графе'))
 for i in range(M):
     a = list(input().split())
     if len(a) == 2:
