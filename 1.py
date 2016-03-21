@@ -1,7 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 G = nx.Graph()
-M = int(input('Количество рёбер в графе'))
+M = int(input('Количество рёбер в графе '))
 for i in range(M):
     a = list(input().split())
     if len(a) == 2:
@@ -9,7 +9,7 @@ for i in range(M):
     elif len(a) == 1:
         G.add_node(a[0])
     else:
-        print('Введите правильно') 
+        print('Введите правильно! ') 
 nx.draw(G)
 plt.savefig("simple_path.png") # save as png
 plt.show() # display
