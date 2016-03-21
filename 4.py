@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import networkx as nx
 def graf():
     G = {}
-    for i in range(int(input('Количество рёбер в графе'))):
+    for i in range(int(input('Количество рёбер в графе '))):
         a, b = input().split()
         if a not in G:
             G[a] = {b}
@@ -38,4 +38,4 @@ komp = svyaz(G, fired, 0)
 nx.draw(P)
 plt.savefig("simple_path.png") # save as png
 plt.show() # display
-print('Компонента связности:', komp)
+print('Компонента связности = ', komp)
