@@ -2,9 +2,8 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 def graf():
-    N = int(input())
     G = {}
-    for i in range(int(input())):
+    for i in range(int(input('Количество рёбер в графе'))):
         a, b = input().split()
         if a not in G:
             G[a] = {b}
@@ -28,12 +27,12 @@ def bsf(G, P, start, fired):
 P = nx.Graph()
 G = graf()
 fired = set()
-bsf(G, P, '0', fired)
+zero = input('Введите начальную точку')
+bsf(G, P, zero, fired)
 nx.draw(P)
 plt.savefig("simple_path.png") # save as png
 plt.show() # display
 
 
-  
                 
             
