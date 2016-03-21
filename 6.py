@@ -36,10 +36,3 @@ print('Кратчайшие пути из ')
 nx.draw(P)
 plt.savefig("simple_path.png") # save as png
 plt.show() # display
-zero = input('Введите начальную точку ')
-finish = input('Введите конечную точку ')
-shortest_path = dejkstra(G, zero)
-print('Кратчайшие пути из ')
-nx.draw(P)
-plt.savefig("simple_path.png") # save as png
-plt.show() # display
