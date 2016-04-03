@@ -1,7 +1,7 @@
 # prac20
 import matplotlib.pyplot as plt
 import networkx as nx
-def graph():
+def graf():
     input2 = open("./graph_input2.txt","r")
     list2 = input2.readlines()
     G = {}
