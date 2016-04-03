@@ -1,9 +1,12 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 def graf():
+    input3 = open("./graph_input3.txt","r")
+    list3 = input3.readlines()
     G = {}
-    for i in range(int(input('Количество рёбер в графе '))):
-        a, b, weight = input().split()
+    for i in range(len(list3)):
+        list3[i] = list3[i].rstrip()
+        a, b, weight = list3[i].split()
         weight = float(weight)
         if a not in G:
             G[a] = {b:weight}
