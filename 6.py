@@ -1,12 +1,13 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 def graph():
-    N = int(input('Количество вершин в графе '))
+    input4 = open("./graph_input4.txt","r")
+    list4 = input4.readlines()
+    N = int(list4[0])
     weight = [[float('+inf')]*N for j in range(N)]
     for i in range(N):
         weight[i][i] = 0
-    M = int(input('Количество ребер в графе '))
-    for i in range(M):
+    for i in range():
         a, b, w = input().split()
         a, b, w = int(a), int(b), float(w)
         weight[a][b] = w
