@@ -1,10 +1,13 @@
 # prac20
 import matplotlib.pyplot as plt
 import networkx as nx
-def graf():
+def graph():
+    input2 = open("./graph_input2.txt","r")
+    list2 = input2.readlines()
     G = {}
-    for i in range(int(input('Количество рёбер в графе '))):
-        a, b = input().split()
+    for i in range(len(list2)):
+        list2[i] = list2[i].rstrip()
+        a, b = list2[i].split()
         if a not in G:
             G[a] = {b}
         else:
@@ -13,7 +16,7 @@ def graf():
             G[b] = {a}
         else:
             G[b].add(a)
-    return G            
+    return G         
 def bsf(G, P, start, fired):
     queue = [start]
     fired.add(start)
