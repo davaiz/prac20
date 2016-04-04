@@ -30,7 +30,7 @@ def dejkstra(G, start):
                 queue.append(neighbour)
     return shortest_path
 G = graf()
-zero = input('Введите начальную точку ')
+zero = 'Апельсиновый'
 shortest_path = dejkstra(G, zero)
 print('Кратчайшие пути из ;')
 for vertex in G:
