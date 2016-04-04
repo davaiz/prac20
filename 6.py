@@ -1,22 +1,15 @@
-import matplotlib.pyplot as plt
-import networkx as nx
-def graph():
-    input3 = open("./graph_input3.txt","r")
-    list3 = input3.readlines()
-    G = {}
-    for i in range(len(list3)):
-        list3[i] = list3[i].rstrip()
-        a, b, weight = list3[i].split()
-        weight = float(weight)
-        if a not in G:
-            G[a] = {b:weight}
-        else:
-            G[a][b] = weight
-        if b not in G:
-            G[b] = {a:weight}
-        else:
-            G[b][a] = weight
-    return G
+def graph_input():
+    N = int(input('Количество вершин в графе: '))
+    weight = [[float('+inf')]*N for j in range(N)]
+    for i in range(N):
+        weight[i][i] = 0
+    M = int(input('Количество ребер в графе: '))
+    for i in range(M):
+        a, b, w = input().split()
+        a, b, w = int(a), int(b), float(w)
+        weight[a][b] = w
+        weight[b][a] = w
+    return weight
 def printm(A):
     for i in range(len(A)):
         print(*A[i], sep='\t')
