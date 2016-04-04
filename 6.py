@@ -39,6 +39,6 @@ def shortest(G, start, finish):
         t = D[t][1]
     return path[::-1]
 G = graph()
-zero = input('Введите начальную точку ')
-finish = input('Введите конечную точку ')
+zero = 'Апельсиновый'
+finish = 'Мандариновый'
 print(shortest(G,zero,finish))
