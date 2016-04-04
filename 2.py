@@ -27,7 +27,7 @@ def friends(G, P, start, called):
 P = nx.Graph()
 G = graf()
 called = []
-zero = input('Введите начальную точку ')
+zero = 'Апельсиновый'
 friends(G, P, zero, called)
 nx.draw(P)
 plt.savefig("simple_path.png") # save as png
