@@ -17,28 +17,23 @@ def graph():
         else:
             G[b][a] = weight
     return G
+def printm(A):
+    for i in range(len(A)):
+        print(*A[i], sep='\t')
+    print()
 
-def dejkstra(G, start):
-    shortest_path = {vertex:float('+inf') for vertex in G}
-    shortest_path[start] = 0
-    queue = [start]
-    while queue:
-        current = queue.pop(0)
-        for neighbour in G[current]:
-            offering_shortest_path = shortest_path[current] + G[current][neighbour]
-            if offering_shortest_path < shortest_path[neighbour]:
-                shortest_path[neighbour] = offering_shortest_path
-                queue.append(neighbour)
-    return shortest_path
-def shortest(G, start, finish):
-    D = dejkstra(G, start)
-    t = finish
-    path=[]
-    while t:
-        path.append(t)
-        t = D[t][1]
-    return path[::-1]
-G = graph()
-zero = 'Апельсиновый'
-finish = 'Мандариновый'
-print(shortest(G,zero,finish))
+from copy import deepcopy
+
+def floyd(w):
+    N = len(w)
+    F = deepcopy(w)
+    for k in range(N):
+        for i in range(N):
+            for j in range(N):
+                F[i][j] = min(F[i][j], F[i][k] + F[k][j])
+    return F
+
+G = graph_input()
+printm(G)
+F = floyd(G)
+printm(F)
