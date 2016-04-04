@@ -30,7 +30,7 @@ def bsf(G, P, start, fired):
 P = nx.Graph()
 G = graf()
 fired = set()
-zero = input('Введите начальную точку ')
+zero = 'Апельсиновый'
 bsf(G, P, zero, fired)
 nx.draw(P)
 plt.savefig("simple_path.png") # save as png
