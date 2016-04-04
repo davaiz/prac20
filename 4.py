@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 def graf():
-    input2 = open("./graph_input2.txt","r")
+    input2 = open("./graph_input2-4.txt","r")
     list2 = input2.readlines()
     G = {}
     for i in range(len(list2)):
