@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 def graf():
-    input3 = open("./graph_input3.txt","r")
+    input3 = open("./graph_input5.txt","r")
     list3 = input3.readlines()
     G = {}
     for i in range(len(list3)):
